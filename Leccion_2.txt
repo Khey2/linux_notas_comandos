@@ -125,38 +125,64 @@ CONCEPTOS:
 
             ¿Que es un bloque?
 
-            R:        
+            R: Un bloque es una unidad de almacenamiento en el disco, aqui se estan usando 8 bloques
+
+            En los sistemas de archivos de los sistemas operativos, un bloque es la unidad básica de
+            almacenamiento en disco.
+
+            un disco duro o SSD se divide en bloques o sectores. CADA BLOQUE tiene un tamaño fijo
+            que se define cuando se formatea el disco. El tamaño comun para estos bloques es de 4 KB,
+            aunque puede variar ( por ejemplo, 512 bytes, 8 kb, etc )
+
+            CUANDO UN ARCHIVO ES GUARDADO EN TU FS, se divide en bloques de 4kb ( depende el sistema )
+
+            osea, si tu arhico pesa 401 kb... ocupara 101 bloques de 4kb, y como 101 bloques es igual a 404kb
+            , estaras desperdiciando 3kb de almacenamientod e tu disco duro
 
 
-    IO Block:
+    IO Block: te dice que para Lectura y Escritura ocupara bloques de 4kb ( 4096 )
 
-    regular file:
+    regular file: te dice que es un tipo de archivo regular, en contrasre con directorios, enlaces simbolicos, etc.
 
 
-    Device:
+    Device: 810h/2064d
 
-    Inode:
+            Muestra el identificador del dispositivo en el que reside el archivo
+
+            810: es el identificador hexadecimal 
+            
+            2064d: es el identificador decimal.
+
+    Inode: 272457014
+
+        El número de inodo es un identificador unico para el archivo en el sistema de archivos...
+        el inodo contiene informacion sobre ela rchivo, su tamaño y ubicacion en el disco.
 
 
     Links:
 
+            indica el numero de ENLACES DUROS ( hard links ) que apuntan al archivo
 
-    Acces: 
-
-    Uid: 
-
-
-    Gid: 
+            un hard link es una referencia adicional a un archivo en un sistema de archivos
+            Unix/Linux
 
 
-    Context: 
+    Access: Muestra la fecha y hora de la ultima vez que el estado del archivo fue accedido
 
-    Modify: 
+    Uid: es el identificador unico del usuario ( ejemplo 317356), ademas d emostar tu nombre de usuario
 
-    Change: 
+    Gid: Es el identificador de grupo y ek nombre del grupo
 
 
-    Birth: 
+    Context: Muestra el contexto de seguridad de SELinux ( Security Enhanced Linux) aqui se indica que el
+            archivo tiene el contexto 'guest_u:object_r:user_home_t:s0
+
+    Modify: Fecha y hora de ultima modificacion
+
+    Change: muestra fecha y hora de CAMBIOS a nivel de permisos o propiedad
+
+
+    Birth: indica fecha y hora en el que ela rchivo fue creado.
 
 
 ----------------------- comando  -----------------------------------------
