@@ -1,0 +1,183 @@
+
+Leccion 2 - Crear archivos, mostrar contenidos y estadisitcas.
+
+
+
+-------------- comando 1: touch ----------------------------------
+
+El comando touch en linux crea un archivo ( si ya existe este archivo, lo va a sobrescribir )
+
+ejemplo: 
+
+touch file1.txt
+
+
+------------------- comando 2: dir -----------------------------------------
+
+dir es usado para listar contenido de directorios es iguala  usar ls
+
+
+
+------------------- comando 3: clear -----------------------------------------
+
+clear limpia tu consola! ( los outputs ) y deja tu consola vacia
+
+
+clear
+
+
+
+------------------- comando 4: echo -----------------------------------------
+
+echo imprime un mensaje en la consola
+
+ejemplo: echo "Hello" // Outoput: Hello
+
+
+------------------------ comando 5: echo + > -----------------------------------------
+
+
+echo cuando agregas el operador > asigna su OUTPUT del comando a el contenido de un archivo!
+
+
+ejemplo:
+
+        echo "hello" > saludo.txt // si no existe saludo.txt se creara
+
+    puedes ver el contenido con cat + filename, ademas el operador > pone el output
+    del comando sobrescribiendo TODO el contenido del archivo
+
+
+
+------------------------ comando 6: >>  -----------------------------------------
+
+
+Puedes con el operador >> agregar contenido a un archivo al "final" de la linea
+del archivo... no sobrecribiendo nada de tu file.
+
+ejemplo:
+
+        echo "Saludo numero 2" >> saludo.txt
+
+
+
+------------------------ comando 7: cat  -----------------------------------------
+
+cat te permite ver el contenido interno de un archivo
+
+
+    Ejemplo:
+            cat logs.txt
+
+
+----------------------- comando 8: head  -----------------------------------------
+
+Head te permite listar el contenido de n cantidad de lineas de ARRIBA ( de la cabeca ) del archivo
+
+Ejemplo:
+
+        head -2 Saludo.txt // mostrara las primeras 2 lineas del archivo Saludo.txt
+
+
+
+----------------------- comando 9: tail -----------------------------------------
+
+Tail es lo contrario a head... basicamente... te da la "cola" del archivo de n cantidad de lineas que espesifiques
+
+Ejemplo:
+
+    tail -1 Saludos.txt
+
+    ( si no mandas -n mostrara por defecto las ultimas 10 lineas )
+
+
+
+
+----------------------- comando 10: stat  -----------------------------------------
+
+te da estadisticas detalladas de un archivo o directorio!
+
+el output de , ejemplo, stat saludo.txt es igual a:
+
+
+-sh-4.2$ stat saludo.txt                                               
+  File: ‘saludo.txt’                                                   
+  Size: 43              Blocks: 8          IO Block: 4096   regular file    
+
+Device: 810h/2064d      Inode: 272457014   Links: 1                    
+Access: (0664/-rw-rw-r--)  Uid: (317356/   Khey1)   Gid: (317415/   Khe
+y1)                    
+
+Context: guest_u:object_r:user_home_t:s0                               
+Access: 2024-08-16 22:15:42.334935509 +0000                            
+Modify: 2024-08-16 22:15:40.911898168 +0000                            
+Change: 2024-08-16 22:15:40.911898168 +0000                            
+ Birth: -
+
+
+CONCEPTOS:
+
+    File: Muestra el nombre del archivo sobre el cual se esta consultando informacion.
+
+    Size: indica el tamaño en bytes del archivo...
+
+    Block: Muestra el numero de bloques de disco utilizados por el archivo.
+
+            ¿Que es un bloque?
+
+            R:        
+
+
+    IO Block:
+
+    regular file:
+
+
+    Device:
+
+    Inode:
+
+
+    Links:
+
+
+    Acces: 
+
+    Uid: 
+
+
+    Gid: 
+
+
+    Context: 
+
+    Modify: 
+
+    Change: 
+
+
+    Birth: 
+
+
+----------------------- comando  -----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
